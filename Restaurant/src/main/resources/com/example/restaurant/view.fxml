@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="com.example.restaurant.Controller" alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.restaurant.Controller">
     <children>
         <Label alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Prekių užsakymas" textAlignment="CENTER">
             <font>
@@ -29,7 +29,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <ChoiceBox prefWidth="150.0" />
+                        <ChoiceBox fx:id="productType" prefWidth="150.0" onAction="#productTypeHandler"/>
                     </children>
                 </VBox>
             </children>
@@ -50,7 +50,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <ChoiceBox prefWidth="150.0" />
+                        <ChoiceBox fx:id="productId" prefWidth="150.0" />
                     </children>
                 </VBox>
             </children>
@@ -71,7 +71,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <Label text="Pasirinkite prekę, kad matyti jos likutiį" textFill="#fc0000" />
+                        <Label fx:id="quanityLabel" text="Pasirinkite prekę, kad matyti jos likutiį" textFill="#fc0000" />
                     </children>
                 </VBox>
             </children>
@@ -89,7 +89,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <TextField maxHeight="1.7976931348623157E308" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" />
+                        <TextField fx:id="quanityId" maxHeight="1.7976931348623157E308" maxWidth="110.0" prefHeight="25.0" prefWidth="110.0" />
                     </children>
                 </VBox>
             </children>
@@ -110,7 +110,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <ChoiceBox prefWidth="150.0" />
+                        <ChoiceBox fx:id="color" prefWidth="150.0" />
                     </children>
                 </VBox>
             </children>
@@ -131,7 +131,7 @@
                 </VBox>
                 <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0">
                     <children>
-                        <ChoiceBox prefWidth="150.0" />
+                        <ChoiceBox fx:id="payment" prefWidth="150.0" />
                     </children>
                 </VBox>
             </children>
@@ -141,7 +141,7 @@
         </HBox>
         <VBox alignment="CENTER" prefHeight="137.0" prefWidth="600.0">
             <children>
-                <Button mnemonicParsing="false" text="Užsakyti"/>
+                <Button mnemonicParsing="false" text="Užsakyti" />
             </children>
         </VBox>
     </children>
